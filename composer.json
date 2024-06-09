@@ -1,7 +1,8 @@
 {
     "name": "lintankwgbn/laravel-adminlte",
     "description": "AdminLTE is an HTML template that can be used for any purpose.",
-    "type": "library",
+    "keywords": ["laravel", "adminlte", "dashboard"],
+    "type": "package",
     "require": {
         "php": "^8.2",
         "ext-json": "*",
