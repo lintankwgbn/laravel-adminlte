@@ -11,8 +11,8 @@ class ComposerHelper
     /**
      * Determine processing the given commands.
      *
-     * @param  array  $command
-     * @param  callable  $callback
+     * @param  array    $command
+     * @param  callable $callback
      * @return int
      */
     protected function processing(array $command, callable $callback = null)
@@ -25,7 +25,7 @@ class ComposerHelper
     /**
      * Determine if the given Composer package is installed.
      *
-     * @param  string  $package
+     * @param  string   $package
      * @return bool
      */
     public function hasComposerPackage(string $package)
@@ -39,9 +39,9 @@ class ComposerHelper
     /**
      * Removes the given Composer Packages into the application.
      *
-     * @param  mixed  $packages
-     * @param  string  $composer
-     * @param  callable  $callback
+     * @param  mixed    $packages
+     * @param  string   $composer
+     * @param  callable $callback
      * @return bool
      */
     public function removeComposerPackages($packages, string $composer, callable $callback)
@@ -61,9 +61,9 @@ class ComposerHelper
     /**
      * Installs the given Composer Packages into the application.
      *
-     * @param  mixed  $packages
-     * @param  string  $composer
-     * @param  callable  $callback
+     * @param  mixed    $packages
+     * @param  string   $composer
+     * @param  callable $callback
      * @return bool
      */
     public function requireComposerPackages($packages, string $composer, callable $callback)
@@ -83,9 +83,9 @@ class ComposerHelper
     /**
      * Removes the given Composer Packages as "dev" dependencies.
      *
-     * @param  mixed  $packages
-     * @param  string  $composer
-     * @param  callable  $callback
+     * @param  mixed    $packages
+     * @param  string   $composer
+     * @param  callable $callback
      * @return bool
      */
     public function removeComposerDevPackages($packages, string $composer, callable $callback)
@@ -105,9 +105,9 @@ class ComposerHelper
     /**
      * Install the given Composer Packages as "dev" dependencies.
      *
-     * @param  mixed  $packages
-     * @param  string  $composer
-     * @param  callable  $callback
+     * @param  mixed    $packages
+     * @param  string   $composer
+     * @param  callable $callback
      * @return bool
      */
     public function requireComposerDevPackages($packages, string $composer, callable $callback)
@@ -127,8 +127,8 @@ class ComposerHelper
     /**
      * Update the "package.json" file.
      *
-     * @param  callable  $callback
-     * @param  bool  $dev
+     * @param  callable $callback
+     * @param  bool     $dev
      * @return void
      */
     public function updateNodePackages(callable $callback, $dev = true)
@@ -161,13 +161,13 @@ class ComposerHelper
      */
     public function phpBinary()
     {
-        return (new PhpExecutableFinder())->find(false) ?: 'php';
+        return (new PhpExecutableFinder)->find(false) ?: 'php';
     }
 
     /**
      * Run the given commands.
      *
-     * @param  array  $commands
+     * @param  array    $commands
      * @return void
      */
     public function runCommands($commands, $output)
