@@ -1,7 +1,7 @@
 {
     "name": "lintankwgbn/laravel-adminlte",
     "description": "AdminLTE is an HTML template with Laravel Framework that can be used for any purpose.",
-    "keywords": ["laravel", "adminlte", "dashboard"],
+    "keywords": ["laravel", "adminlte", "mobiledetect", "sanctum", "fortify"],
     "type": "package",
     "license": "MIT",
     "require": {
@@ -11,9 +11,9 @@
         "illuminate/console": "^11.0",
         "illuminate/support": "^11.0",
         "laravel/fortify": "^1.20",
+        "laravel/sanctum": "^4.0",
         "mobiledetect/mobiledetectlib": "^4.8",
-        "symfony/console": "^7.0",
-        "laravel/sanctum": "^4.0"
+        "symfony/console": "^7.0"
     },
     "require-dev": {
         "laravel/framework": "^11.0"

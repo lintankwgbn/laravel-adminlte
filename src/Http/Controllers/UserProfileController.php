@@ -2,8 +2,10 @@
 
 namespace Lintankwgbn\Adminlte\Http\Controllers;
 
+use Detection\Cache\Cache;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Lintankwgbn\Adminlte\Agent;
 
 class UserProfileController extends Controller
 {
@@ -17,6 +19,7 @@ class UserProfileController extends Controller
     {
         return view('profile.show', [
             'request' => $request,
+            'agent' => new Agent(),
             'user' => $request->user(),
         ]);
     }
