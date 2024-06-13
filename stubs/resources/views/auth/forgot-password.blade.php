@@ -1,8 +1,8 @@
         <x-guest-layout>
-            <x-auth.authentication-card>
-                <x-slot name="logo"><b>Admin</b>LTE</x-slot>
-                <div class="card-body">
-                    <p class="login-box-msg">You forgot your password? Here you can easily retrieve a new password.</p>
+            <x-auth.card>
+                <x-auth.card-header />
+                <x-auth.card-body>
+                    <x-slot name="msg">You forgot your password? Here you can easily retrieve a new password.</x-slot>
                     <form action="/forgot-password" method="post">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}" autocomplete="off" />
                         <div class="input-group mb-3">
@@ -17,9 +17,9 @@
                             </div>
                         </div>
                     </form>
-                    <p class="mt-3 mb-1">
+                    <p class="mt-3 mb-0">
                         <a href="/login" class="text-center">I already have a membership</a>
                     </p>
-                </div>
-            </x-auth.authentication-card>
+                </x-auth.card-body>
+            </x-auth.card>
         </x-guest-layout>

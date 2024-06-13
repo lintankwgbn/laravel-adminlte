@@ -1,8 +1,8 @@
         <x-guest-layout>
-            <x-auth.authentication-card>
-                <x-slot name="logo"><b>Admin</b>LTE</x-slot>
-                <div class="card-body">
-                    <p class="login-box-msg">You are only one step a way from your new password, recover your password now.</p>
+            <x-auth.card>
+                <x-auth.card-header />
+                <x-auth.card-body>
+                    <x-slot name="msg">You are only one step a way from your new password, recover your password now.</x-slot>
                     <form action="/reset-password" method="post">
                         <input type="hidden" name="email" value="{{ $request->query('email') }}" />
                         <input type="hidden" name="token" value="{{ $request->route('token') }}" autocomplete="off" />
@@ -25,9 +25,9 @@
                             </div>
                         </div>
                     </form>
-                    <p class="mt-3 mb-1">
+                    <p class="mt-3 mb-0">
                         <a href="/login" class="text-center">I already have a membership</a>
                     </p>
-                </div>
-            </x-auth.authentication-card>
+                </x-auth.card-body>
+            </x-auth.card>
         </x-guest-layout>
